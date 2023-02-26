@@ -2,7 +2,7 @@
 //   "postgres://postgres:kibria7533@localhost:5432/lawyer";
 
 module.exports.connectionString =
-  "postgresql://localhost/lawyer?user=lawyer&password=lawyer";
+  "postgresql://localhost/postgres?user=postgres&password=postgres";
 
 module.exports.secretOrKey = "secretString";
 module.exports.fontendUrl = "https://dossier-dev-app-hjmzd.ondigitalocean.app/";
