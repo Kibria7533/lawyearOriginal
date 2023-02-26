@@ -1,6 +1,6 @@
 module.exports.connectionString =
 
-  "postgresql://doadmin:T1CQBsVx5LWXJ5BV@dossierdirect-do-user-10125594-0.b.db.ondigitalocean.com:25060/defaultdb";
+  "postgresql://localhost/lawyer?user=lawyer&password=lawyer";
 
 
 module.exports.secretOrKey = "secretString";
