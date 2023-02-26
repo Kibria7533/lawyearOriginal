@@ -23,6 +23,7 @@ const mailSender = require("../utitls/sendGrid");
 const Comment = require("../model/Comments");
 const Option = require("../model/Option");
 const CategorySubCategory = require("../model/categorySubCategories");
+console.log(connectionString, "connectionString");
 
 const db = new Sequelize(connectionString, {
   ssl: { rejectUnauthorized: false },
