@@ -1,0 +1,265 @@
+.title-settings {
+  color: #1f295a;
+  font-weight: 700;
+  font-size: 36px;
+  /* margin-bottom: 17px; */
+}
+
+.logo_class_mobile {
+  margin: 12px 0 20px 0;
+  @media screen and (min-width: 500px) {
+    display: none;
+  }
+}
+
+.settings_container {
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+}
+
+.nav_bar_settings {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+  p {
+    margin-bottom: 4px;
+    margin-right: 40px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #9d9d9d;
+    line-height: 22px;
+  }
+}
+
+.paragraph_billing_page {
+  font-size: 18px;
+  font-weight: 400;
+  color: #1f295a;
+  margin-bottom: 28px;
+}
+
+.add_payment_container {
+  cursor: pointer;
+  gap: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*  max-width: 538px; */
+  height: 119px;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: 0.5s all;
+
+  &:hover {
+    background: #dbf1ff;
+  }
+
+  p {
+    color: #455ece;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+  }
+}
+
+.payment_method_title {
+  font-size: 18;
+  color: #1f295a;
+  font-weight: 700;
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 501px) {
+    margin-bottom: 40px;
+  }
+}
+
+.container_billing_date {
+  display: flex;
+  gap: 103px;
+  color: "#455ECE";
+  font-weight: 400;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 28px;
+  }
+}
+
+.billing_back {
+  margin-bottom: 40px;
+  @media screen and (min-width: 500px) {
+    display: none;
+  }
+}
+
+.billing_title_table {
+  margin-bottom: 30px;
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 18px;
+  }
+}
+
+.table_desktop_container {
+  padding-bottom: 10rem;
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.table_mobile {
+  padding-bottom: 2rem;
+}
+
+.table_desktop {
+  height: 50px;
+}
+
+.table_item {
+  @media screen and (min-width: 1001px) {
+    border-right: "1px solid #E1E1E1";
+  }
+  @media screen and (max-width: 1000px) {
+    border-bottom: "1px solid #E1E1E1";
+    width: 100%;
+  }
+}
+
+.dropdown_item_months:hover {
+  background: #dbf1ff;
+}
+
+.table_mobile {
+  @media screen and (max-width: 1000px) {
+  }
+  @media screen and (min-width: 1001px) {
+    display: none;
+  }
+}
+
+.table_mobile_item {
+  border: 1px solid #9d9d9d;
+  margin-bottom: 12px;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.table_mobile_item_row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.table_mobile_item_row_no_border {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0 20px 0;
+  font-size: 16px;
+}
+
+.last_item_table_mobile_billing {
+  display: flex;
+  justify-content: flex-end;
+  color: #455ece;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.result_table_mobile_billing {
+  font-weight: 600;
+  color: #1f295a;
+}
+.title_table_mobile_billing {
+  font-weight: 600;
+  color: #9d9d9d;
+}
+
+.grid_container_card {
+  display: grid;
+  gap: 20px;
+  /*   max-width: 1096px; */
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  margin-bottom: 80px;
+  @media screen and (max-width: 500px) {
+    margin-bottom: 60px;
+  }
+}
+
+.card_added_payment_container {
+  /*  max-width: 538px; */
+  height: 119px;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 0 20px;
+  @media screen and (max-width: 500px) {
+    padding: 0 12px;
+  }
+  p {
+    color: #455ece;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+  }
+}
+
+.card_added_payment_container_top {
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+  height: 80px;
+  border-bottom: 1px solid #e5e5e5;
+  @media screen and (max-width: 500px) {
+    padding: 18px 0px;
+  }
+}
+
+.card_added_payment_container_top_first {
+  width: 104px;
+  @media screen and (max-width: 500px) {
+    width: 65px;
+  }
+}
+.card_added_payment_container_top_second {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.card_added_payment_container_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 39px;
+  padding: 10px 0px 13px 0px;
+
+  @media screen and (max-width: 500px) {
+    padding: 10px 0 13px 0;
+  }
+}
+
+.button_action_card {
+  font-weight: 700;
+  font-size: 16px;
+  color: #455ece;
+}
+
+.status_card {
+  color: black;
+  font-weight: 400;
+}
+
+.drop_down_years {
+  @media screen and (max-width: 500px) {
+    left: 0;
+  }
+  @media screen and (min-width: 501px) {
+    right: 0;
+  }
+}

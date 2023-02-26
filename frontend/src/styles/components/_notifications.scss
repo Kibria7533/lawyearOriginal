@@ -1,0 +1,121 @@
+#notifications_page {
+  .notifications_divider {
+    height: 1px;
+    background: #9d9d9d;
+    margin-bottom: 35px;
+  }
+  .notification_type {
+    color: #787878;
+    margin-bottom: 0.625rem;
+    font-weight: 400;
+    cursor: pointer;
+    span.ant-input-suffix {
+      font-size: 22px;
+      margin-right: -15px;
+    }
+  }
+  .notification_type input {
+    color: #787878;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .marked {
+    background-color: #dbf1ff;
+    color: #1f295a;
+    border: 1px solid #dbf1ff;
+    font-weight: 600;
+    .ant-input {
+      background-color: #dbf1ff;
+    }
+  }
+  .marked input {
+    background-color: #dbf1ff;
+    color: #1f295a;
+    font-weight: 600;
+  }
+  .notification_number {
+    min-height: 20px;
+    min-width: 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #455ece;
+    border-radius: 50%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    padding-top: 2px;
+    text-align: center;
+  }
+  .sort_by_filter {
+    p {
+      font-weight: 400;
+      font-size: 1.125rem;
+      margin: 0;
+      margin-right: 0.625rem;
+    }
+    .ant-select {
+      width: auto !important;
+      .ant-select-selector {
+        padding: 0;
+        border: none;
+        height: auto;
+        box-shadow: none;
+        .ant-select-item {
+          font-weight: 400;
+          font-size: 1.125rem;
+          width: 50px;
+        }
+      }
+    }
+    .ant-select-selection-item {
+      font-weight: 400;
+      font-size: 1.125rem;
+      color: #455ece;
+      &::after {
+        padding-left: 10px;
+      }
+    }
+  }
+  .ant-checkbox-input {
+    width: 12px;
+    height: 12px;
+  }
+  .ant-checkbox-inner {
+    width: 16px;
+    height: 16px;
+  }
+  .notification-item {
+    padding: 16px 10px;
+    &:hover {
+      background-color: #dbf1ff;
+    }
+  }
+}
+
+.dropdown_notification_types {
+  width: 153px !important;
+  // width: 300px !important;
+  border-radius: 0.625rem;
+  background: #ffffff;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  padding: 0.625rem;
+}
+
+#menu-notifications-types {
+  .ant-menu {
+    width: 200;
+    border-radius: 9px;
+  }
+
+  .ant-menu > .ant-menu-item:hover,
+  .ant-menu > .ant-menu-submenu:hover,
+  .ant-menu > .ant-menu-item-active,
+  .ant-menu > .ant-menu-submenu-active,
+  .ant-menu > .ant-menu-item-open,
+  .ant-menu > .ant-menu-submenu-open,
+  .ant-menu > .ant-menu-item-selected,
+  .ant-menu > .ant-menu-submenu-selected {
+    color: red;
+    border-bottom: 2px solid red;
+  }
+}

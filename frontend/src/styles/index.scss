@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+html {
+  font-size: 16px;
+  // min-height: 100vh;
+  margin: 0;
+}
+body,
+#root {
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: "Nunito Sans", sans-serif;
+}
+textarea,
+input {
+  outline: none;
+}
+body {
+  margin: 0;
+}
+
+@import "./generic.scss";
+@import "./components/settings.scss";
+@import "./components/profile.scss";
+@import "./components/addPaymentMethod.scss";
+@import "./components/subscription.scss";
+@import "./components/auth-header";
+@import "./components/auth-footer";
+@import "./components/auth";
+@import "./components/side-nav";
+@import "./components/common-element";
+@import "./components/category_management";
+@import "./components/subcategory";
+@import "./components/confirmation_modal";
+@import "./components/client";
+@import "./components/my_file";
+@import "./components/_dashboard";
+@import "./components/notifications";
+@import "./components/mobile_private_layout";
+@import "./responsive";

@@ -1,0 +1,106 @@
+#signin {
+  margin-top: 6.688rem;
+  .form-header {
+    p {
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 1.125rem;
+      color: #212121;
+    }
+    .login-redirect {
+      color: #455ece;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+  .auth-inner {
+    width: 26.25rem;
+    position: relative;
+    margin-bottom: 14rem;
+  }
+  .login-buton {
+    margin-top: 3rem;
+    margin-bottom: 2.125rem;
+  }
+  .remember-me {
+    display: flex;
+    align-items: center;
+    input {
+      border: 1px solid #1f295a;
+      border-radius: 2px;
+      padding: 10px;
+      margin-right: 9px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+    }
+    span {
+      color: #212121;
+      font-size: 1rem;
+      line-height: 1.375rem;
+    }
+  }
+  .forget-password {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    color: #455ece;
+  }
+
+  // signup
+  .exist-userid-text {
+    text-align: right;
+    p {
+      color: #e94614;
+      font-size: 0.875rem;
+      line-height: 1.118rem;
+    }
+  }
+  .error-promp {
+    position: absolute;
+    right: -13.125rem;
+    background: #ffff;
+    border: 1px solid #9d9d9d;
+    padding: 15px;
+    border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    -moz-border-radius: 0.625rem;
+    -ms-border-radius: 0.625rem;
+    -o-border-radius: 0.625rem;
+    .ant-badge-status-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+    .error-text {
+      font-size: 0.875rem;
+      color: #000;
+      font-weight: 500;
+    }
+    .success-text {
+      font-size: 0.875rem;
+      color: #aaa2a2;
+      font-weight: 500;
+    }
+  }
+  .error-promp-signup {
+    bottom: -2.8rem;
+  }
+  .error-promp-restore {
+    top: 4.563rem;
+  }
+  // end signup
+
+  // confirmation page
+  .confirmation-text {
+    margin-top: 6%;
+    h2 {
+      font-size: 2.25rem;
+      color: #1f295a;
+      font-weight: 600 !important;
+      text-align: center;
+    }
+  }
+  // end confirmation
+}

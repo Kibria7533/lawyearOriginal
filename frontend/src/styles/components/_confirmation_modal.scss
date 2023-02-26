@@ -1,0 +1,55 @@
+.confirmation_modal {
+  max-width: 30.313rem;
+  border-radius: 0.625rem;
+  //   background-color: red;
+  .ant-modal-content {
+    border-radius: 0.625rem;
+  }
+  .ant-modal-close {
+    display: none !important;
+  }
+  p.modal_title {
+    max-width: 20rem;
+    font-size: 1.125rem;
+    margin: 0 auto 1.875rem;
+    text-align: center;
+  }
+  .action_box {
+    // display: inline-block;
+    // margin: auto;
+    p.cancel_btn {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-right: 2.5rem;
+      display: inline-block;
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+    p.ok_btn {
+      font-size: 1rem;
+      font-weight: 700;
+      color: red;
+      display: inline-block;
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.add_question_modal {
+  max-width: 30.313rem;
+  border-radius: 0.625rem;
+  //   background-color: red;
+  .ant-modal-content {
+    border-radius: 0.625rem;
+  }
+  p.modal_title {
+    //   max-width: 16.25rem;
+    font-size: 1.125rem;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+  .action_box {
+    margin-top: 20px;
+  }
+}
