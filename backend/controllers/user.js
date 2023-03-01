@@ -76,7 +76,7 @@ module.exports = {
       res.status(201).json({ success: true, user });
     } catch (err) {
       console.log(err);
-      res.status(400).json(err?.message || err);
+      res.status(400).json({ err: "some mismatch!" });
     }
   },
   logIn: async (req, res) => {
