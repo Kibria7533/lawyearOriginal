@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
 const userRouter = require("./routers/user");
+const adminRouter = require("./routers/admin");
 const categoryRouter = require("./routers/category");
 const subcategoryRouter = require("./routers/subcategory");
 const requestRouter = require("./routers/request");
@@ -29,6 +30,7 @@ stratagy.jwtStra(passport);
 // stratagy.facebookStrategy(passport);
 
 app.use("/user", userRouter);
+app.use("/admin", adminRouter);
 app.use("/category", categoryRouter);
 app.use("/subcategory", subcategoryRouter);
 app.use("/request", requestRouter);

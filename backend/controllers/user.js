@@ -17,6 +17,7 @@ module.exports = {
       }
       user_id = user_id.toLowerCase();
       const validatorMsg = validator({ email, pass });
+      console.log('here',validatorMsg);
       if (validatorMsg) {
         return res.status(404).json({ err: validatorMsg });
       }
