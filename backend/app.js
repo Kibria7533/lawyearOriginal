@@ -11,6 +11,7 @@ const subcategoryRouter = require("./routers/subcategory");
 const requestRouter = require("./routers/request");
 const subscriptionRouter = require("./routers/subscription");
 const stratagy = require("./config/passport");
+require('dotenv').config();
 
 require("./db");
 // "engines": {
