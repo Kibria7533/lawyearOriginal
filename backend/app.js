@@ -1,3 +1,4 @@
+require("dotenv").config();
 const path = require("path");
 const express = require("express");
 const passport = require("passport");
@@ -12,7 +13,7 @@ const requestRouter = require("./routers/request");
 const subscriptionRouter = require("./routers/subscription");
 const stratagy = require("./config/passport");
 
-
+require("./db");
 
 // "engines": {
 //     "node": "14x"
@@ -36,7 +37,7 @@ app.use("/category", categoryRouter);
 app.use("/subcategory", subcategoryRouter);
 app.use("/request", requestRouter);
 app.use("/subscription", subscriptionRouter);
-require("./db");
+
 
 app.get("/", (req, res) =>
   res.status(200).send("Hello from dossier_direct_api@1.0.0")
