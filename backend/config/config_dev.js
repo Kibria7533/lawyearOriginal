@@ -1,6 +1,6 @@
 module.exports.connectionString =
 
-"postgresql://postgres:postgres@localhost:5432/postgres";
+"postgresql://lawyer:lawyer7533@localhost:5432/lawyer";
 
 
 module.exports.secretOrKey = "secretString";
