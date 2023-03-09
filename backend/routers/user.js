@@ -33,7 +33,7 @@ router.route("/password-reset/:id").put(userControllers.resetPassword);
 // @Route: 'user/me'
 // @Description: modification of profile
 // @Access: need to authenticate
-router
+ router
   .route("/me/:id")
   .get(
     passport.authenticate("jwt", { session: false }),
@@ -64,5 +64,6 @@ router
 router
   .route("/upload")
   .post(middleware.uploadImage.single("singleFile"), userControllers.ServeFile);
+
 
 module.exports = router;

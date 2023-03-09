@@ -18,18 +18,60 @@ const User = (db, DataTypes) =>
       },
       first_name: {
         type: DataTypes.STRING,
-        defaultValue: "",
+        required:true,
       },
       last_name: {
         type: DataTypes.STRING,
-        defaultValue: "",
+        required:true,
+      },
+        office_id: {
+            type: DataTypes.INTEGER,
+            required:true,
+        },
+      designation: {
+        type: DataTypes.STRING,
+          required:true,
       },
       email: {
         type: DataTypes.STRING,
+        required:true
       },
       pass: {
         type: DataTypes.STRING,
+        required:true
       },
+        phone: {
+            type: DataTypes.INTEGER,
+            required:true
+        },
+      education: {
+        type: DataTypes.STRING,
+        required:true
+      },
+      work_experince: {
+        type: DataTypes.STRING,
+        required:true
+      },
+      chember: {
+        type: DataTypes.STRING,
+        required:true
+      },
+        per_minute_charge: {
+            type: DataTypes.INTEGER,
+            required:true
+        },
+        per_hour_charge: {
+            type: DataTypes.INTEGER,
+            required:true
+        },
+        per_day_charge: {
+            type: DataTypes.INTEGER,
+            required:true
+        },
+        per_case_charge: {
+            type: DataTypes.INTEGER,
+            required:true
+        },
       stripe_customer_id: {
         type: DataTypes.STRING,
       },

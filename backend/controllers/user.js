@@ -10,14 +10,43 @@ const stripeUtil = require("../utitls/stripeUtil");
 
 module.exports = {
   register: async (req, res) => {
+    let {
+      user_id,
+      first_name,
+      last_name,
+      designation,
+      office_id,
+      email,
+      pass,
+      phone,
+      education,
+      work_experince,
+      chember,
+      per_minute_charge,
+      per_hour_charge,
+      per_day_charge,
+      per_case_charge,
+      role = "lawyer",
+    } = req.body;
     try {
-      let { user_id, email, pass, role = "lawyer" } = req.body;
-      if ((!user_id || !email, !pass)) {
+      if (
+        !user_id ||
+        !first_name ||
+          !last_name ||
+          !designation||
+          !office_id ||
+        !email ||
+        !pass
+          || !phone || !education || !work_experince || !chember || !per_minute_charge || !per_hour_charge || !per_day_charge || !per_case_charge
+      ) {
+
+
         return res.status(404).json({ err: "Some data have problem!" });
       }
+
       user_id = user_id.toLowerCase();
       const validatorMsg = validator({ email, pass });
-      console.log('here',validatorMsg);
+
       if (validatorMsg) {
         return res.status(404).json({ err: validatorMsg });
       }
@@ -28,18 +57,29 @@ module.exports = {
       if (role === "client") {
         where = { email, role };
       }
-      // Find user and create new one
+      //Find user and create new one
       const response = await UserModel.findOrCreate({
         where,
         defaults: {
-          user_id,
+          first_name,
+          last_name,
+          designation,
+          office_id,
           email,
           pass,
+          phone,
+          education,
+          work_experince,
+          chember,
+          per_minute_charge,
+          per_hour_charge,
+          per_day_charge,
+          per_case_charge,
           role,
         },
       });
 
-      // Return true or false -> false means record exists. If exist return duplicate
+      //Return true or false -> false means record exists. If exist return duplicate
       if (!response[1]) {
         let err = "User Id alredy exist.";
         if (role === "client") {
@@ -79,6 +119,7 @@ module.exports = {
       res.status(400).json({ err: "some mismatch!" });
     }
   },
+
   logIn: async (req, res) => {
     try {
       let { user_id, pass } = req.body;
@@ -116,6 +157,7 @@ module.exports = {
       res.status(400).json(e?.message || e);
     }
   },
+
   isUserIdAvailable: async (req, res) => {
     try {
       const { user_id } = req.body;

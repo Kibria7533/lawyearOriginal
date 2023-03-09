@@ -111,7 +111,7 @@ db.authenticate()
   .then(() => console.log("Database connected."))
   .catch((err) => console.log("ON DATABASE CONNECTION", err));
 
-db.sync(/* { alter: true } */)
+db.sync( { alter: true } )
   .then(() => console.log("all tables are check successfully."))
   .catch((err) => console.log("ON TABLE SYNC", err));
 
