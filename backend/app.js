@@ -11,6 +11,7 @@ const categoryRouter = require("./routers/category");
 const subcategoryRouter = require("./routers/subcategory");
 const requestRouter = require("./routers/request");
 const subscriptionRouter = require("./routers/subscription");
+const permissionRouter=require('./routers/permission')
 const stratagy = require("./config/passport");
 
 require("./db");
@@ -37,6 +38,7 @@ app.use("/category", categoryRouter);
 app.use("/subcategory", subcategoryRouter);
 app.use("/request", requestRouter);
 app.use("/subscription", subscriptionRouter);
+app.use("/permission",permissionRouter)
 
 
 app.get("/", (req, res) =>

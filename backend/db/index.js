@@ -23,6 +23,7 @@ const mailSender = require("../utitls/sendGrid");
 const Comment = require("../model/Comments");
 const Option = require("../model/Option");
 const CategorySubCategory = require("../model/categorySubCategories");
+const Permission=require("../model/Permission")
 console.log(connectionString, "connectionString");
 
 const db = new Sequelize(connectionString, {
@@ -43,7 +44,7 @@ const RequestQuestionAnswerModel = RequestQuestionAnswer(db, DataTypes);
 const RequestDocumentAnswerModel = RequestDocumentAnswer(db, DataTypes);
 const CommentModel = Comment(db, DataTypes);
 const OptionModel = Option(db, DataTypes);
-
+const PermissionModel=Permission(db,DataTypes)
 const CategorySubCategoryModel = CategorySubCategory(db, DataTypes);
 
 CategorySubCategoryModel.removeAttribute("id");
@@ -132,6 +133,7 @@ module.exports = {
   AlertModel,
   CommentModel,
   CategorySubCategoryModel,
+  PermissionModel,
 };
 
 cron.schedule("5 0 * * *", async () => {

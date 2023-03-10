@@ -120,6 +120,8 @@ module.exports = {
     }
   },
 
+
+
   logIn: async (req, res) => {
     try {
       let { user_id, pass } = req.body;
