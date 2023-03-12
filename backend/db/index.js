@@ -26,6 +26,8 @@ const CategorySubCategory = require("../model/categorySubCategories");
 const Permission=require("../model/Permission")
 const RolePermission=require('../model/Role_Permission')
 const Role=require('../model/Role')
+const UserRole=require('../model/User_Role')
+const UserPermission=require('../model/User_Permission')
 console.log(connectionString, "connectionString");
 
 const db = new Sequelize(connectionString, {
@@ -50,8 +52,8 @@ const CategorySubCategoryModel = CategorySubCategory(db, DataTypes);
 const PermissionModel=Permission(db,DataTypes)
 const RolePermissionModel=RolePermission(db,DataTypes)
 const RoleModel=Role(db,DataTypes)
-
-
+const UserRoleModel=UserRole(db,DataTypes)
+const UserPermissionModel=UserPermission(db,DataTypes)
 CategorySubCategoryModel.removeAttribute("id");
 // user -> draft
 UserModel.hasMany(DraftModel);
@@ -140,7 +142,9 @@ module.exports = {
   CategorySubCategoryModel,
   PermissionModel,
   RolePermissionModel,
-  RoleModel
+  RoleModel,
+  UserRoleModel,
+  UserPermissionModel
 };
 
 cron.schedule("5 0 * * *", async () => {

@@ -42,7 +42,7 @@ module.exports = {
     const id=req.params.id;
     try{
       const singleUser=await  UserModel.findOne({where:{id:id}})
-      res.status(201).json({ success: true, singleUser });
+      res.json(singleUser);
     }catch (err){
       console.log(err);
       res.status(400).json({ err: "some mismatch!" });

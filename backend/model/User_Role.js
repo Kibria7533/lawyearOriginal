@@ -15,9 +15,6 @@ const User_Role = (db, DataTypes) =>
         {
             underscored: true,
         },
-        {
-            timestamp:true
-        }
     );
 
 module.exports = User_Role;

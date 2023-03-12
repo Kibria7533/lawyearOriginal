@@ -6,7 +6,7 @@ module.exports={
     getPermission:async (req,res)=>{
         try{
             const permission=await PermissionModel.findAll({})
-            res.status(201).json({ success: true, permission });
+            res.json(permission);
         }catch (err){
             res.status(400).json({ err: "some mismatch!" });
         }
@@ -43,7 +43,7 @@ module.exports={
         let id=req.params.id
         try {
             let signlePermission=await PermissionModel.findOne({where:{id:id}})
-            res.status(200).json({signlePermission})
+            res.json(signlePermission);
         }catch (err){
             res.status(404).json({ err: "invalid id" });
         }

@@ -5,7 +5,7 @@ module.exports={
     getRolePermission:async (req,res)=>{
         try {
             let allRolePermission= await  RolePermissionModel.findAll({})
-            res.status(200).json({allRolePermission})
+            res.json(allRolePermission);
         }catch (err){
             res.status(400).json({ err: "not a role permission" });
         }
@@ -26,7 +26,7 @@ module.exports={
         let id=req.params.id
         try {
             let signleRolePermission=await RolePermissionModel.findOne({where:{id:id}})
-            res.status(200).json({signleRolePermission})
+            res.json(signleRolePermission);
         }catch (err){
             res.status(404).json({ err: "invalid id" });
         }

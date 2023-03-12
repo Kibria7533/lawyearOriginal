@@ -1,12 +1,12 @@
 const { Sequelize, Op, where} = require("sequelize");
-const {RoleModel, PermissionModel} =require('../db')
+const {RoleModel} =require('../db')
 const {assertArray} = require("@babel/core/lib/config/validation/option-assertions");
 
 module.exports={
     getRole:async (req,res)=>{
         try{
             const role=await RoleModel.findAll({})
-            res.status(201).json({ success: true, role });
+            res.json(role);
         }catch (err){
             res.status(400).json({ err: "some mismatch!" });
         }
@@ -19,7 +19,7 @@ module.exports={
         }
         try{
             const createRole=await RoleModel.create({id,name,active})
-            res.status(200).json({createRole})
+            res.status(201).json({ success: true, createRole });
 
         }catch (err){
             res.status(400).json({ err: "some mismatch!" });
@@ -44,7 +44,7 @@ module.exports={
         const id = req.params.id;
         try {
             let singleRole=await RoleModel.findOne({where:{id:id}})
-            res.status(200).json({singleRole})
+            res.json(singleRole);
         }catch (err){
             res.status(404).json({ err: "invalid id" });
         }
