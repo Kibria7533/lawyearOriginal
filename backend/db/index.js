@@ -24,6 +24,8 @@ const Comment = require("../model/Comments");
 const Option = require("../model/Option");
 const CategorySubCategory = require("../model/categorySubCategories");
 const Permission=require("../model/Permission")
+const RolePermission=require('../model/Role_Permission')
+const Role=require('../model/Role')
 console.log(connectionString, "connectionString");
 
 const db = new Sequelize(connectionString, {
@@ -44,8 +46,11 @@ const RequestQuestionAnswerModel = RequestQuestionAnswer(db, DataTypes);
 const RequestDocumentAnswerModel = RequestDocumentAnswer(db, DataTypes);
 const CommentModel = Comment(db, DataTypes);
 const OptionModel = Option(db, DataTypes);
-const PermissionModel=Permission(db,DataTypes)
 const CategorySubCategoryModel = CategorySubCategory(db, DataTypes);
+const PermissionModel=Permission(db,DataTypes)
+const RolePermissionModel=RolePermission(db,DataTypes)
+const RoleModel=Role(db,DataTypes)
+
 
 CategorySubCategoryModel.removeAttribute("id");
 // user -> draft
@@ -134,6 +139,8 @@ module.exports = {
   CommentModel,
   CategorySubCategoryModel,
   PermissionModel,
+  RolePermissionModel,
+  RoleModel
 };
 
 cron.schedule("5 0 * * *", async () => {

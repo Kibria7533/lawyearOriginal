@@ -40,7 +40,6 @@ module.exports = {
           || !phone || !education || !work_experince || !chember || !per_minute_charge || !per_hour_charge || !per_day_charge || !per_case_charge
       ) {
 
-
         return res.status(404).json({ err: "Some data have problem!" });
       }
 
@@ -66,7 +65,6 @@ module.exports = {
           designation,
           office_id,
           email,
-          pass,
           phone,
           education,
           work_experince,

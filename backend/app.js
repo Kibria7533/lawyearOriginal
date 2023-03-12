@@ -12,6 +12,8 @@ const subcategoryRouter = require("./routers/subcategory");
 const requestRouter = require("./routers/request");
 const subscriptionRouter = require("./routers/subscription");
 const permissionRouter=require('./routers/permission')
+const rolePermissionRouter=require("./routers/role_permission")
+const roleRouter=require('./routers/role')
 const stratagy = require("./config/passport");
 
 require("./db");
@@ -39,8 +41,8 @@ app.use("/subcategory", subcategoryRouter);
 app.use("/request", requestRouter);
 app.use("/subscription", subscriptionRouter);
 app.use("/permission",permissionRouter)
-
-
+app.use("/role-permission",rolePermissionRouter)
+app.use("/role",roleRouter)
 app.get("/", (req, res) =>
   res.status(200).send("Hello from dossier_direct_api@1.0.0")
 );
