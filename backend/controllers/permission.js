@@ -11,16 +11,33 @@ module.exports={
             res.status(400).json({ err: "some mismatch!" });
         }
     },
+    getPermissionByEachTableName:async (req,res)=>{
+        try{
+            const permissionTableName=await PermissionModel.findAll({
+                 attributes: ["table_name","permission_key"],
+                // group: "table_name",
+                  group: ['table_name'],
+                raw:true,
+                nest:true,
+            })
+            res.json(permissionTableName);
+        }catch (err){
+            console.log(err)
+            res.status(400).json({ err: "some mismatch!" });
+        }
+    },
+
     postPermission:async (req,res)=>{
-        const {id,slug,description,active}=req.body;
-        if(!slug || !description || !active){
+        const {id,permission_key,table_name,description,active}=req.body;
+        if(!permission_key || !table_name || !description || !active){
             return res.status(404).json({ err: "Some data have problem!" });
         }
         try{
-            const permission=await PermissionModel.create({id,slug,description,active})
+            const permission=await PermissionModel.create({...req.body})
             res.status(200).json({permission})
 
         }catch (err){
+            console.log(err)
             res.status(400).json({ err: "some mismatch!" });
         }
     },
@@ -45,7 +62,7 @@ module.exports={
             let signlePermission=await PermissionModel.findOne({where:{id:id}})
             res.json(signlePermission);
         }catch (err){
-            res.status(404).json({ err: "invalid id" });
+            res.status(404).json({ err: "invalid id f" });
         }
 
     },
@@ -55,7 +72,7 @@ module.exports={
             let deletePermission= await  PermissionModel.destroy({where:{id:id}})
             res.status(200).json({deletePermission})
         }catch (err){
-            res.status(404).json({ err: "invaild id" });
+            res.status(404).json({ err: "invaild id s" });
         }
 
     }

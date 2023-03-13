@@ -8,11 +8,17 @@ const middleware = require("../middleware/routeHelper");
 // @Route: 'users/register'
 // @Description: Creating a user
 // @Access: Public
+// router.route("/get-permission-by-each-table-name").get(permissionControllers.getPermissionByEachTableName);
 
 router.route("/").get(permissionControllers.getPermission);
 router.route("/").post(permissionControllers.postPermission);
+
 router.route("/:id").put(permissionControllers.updatePermission);
-router.route("/:id").get(permissionControllers.getOnePermission);
+
+router.route("/single-permission/:id").get(permissionControllers.getOnePermission);
+
 router.route("/:id").delete(permissionControllers.deletePermission);
+
+router.route("/get-permission-by-each-table-name").get(permissionControllers.getPermissionByEachTableName);
 
 module.exports = router;

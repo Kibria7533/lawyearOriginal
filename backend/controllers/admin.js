@@ -9,32 +9,18 @@ module.exports = {
     try {
       const user = await UserModel.findAll({}, {
         attributes: [
-          "id",
-          "user_id",
-          "email",
-          "first_name",
-          "last_name",
-            "designation",
-            "office_id",
-            "email",
-            "phone",
-            "education",
-            "work_experince",
-            "chember",
-            "per_minute_charge",
-            "per_hour_charge",
-            "per_day_charge",
-            "per_case_charge",
-          "lawyer_categories",
-          "profile_pic",
-          "role",
+          { exclude: ['pass']}
         ],
-      });
+      }).then( user => {
+        console.log(user)
+        res.json(user);
+          });
 
-     res.json(user);
 
     } catch (err) {
+      console.log(err)
       res.status(400).json(err?.message || err);
+
     }
   },
 

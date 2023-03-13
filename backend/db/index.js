@@ -32,6 +32,7 @@ console.log(connectionString, "connectionString");
 
 const db = new Sequelize(connectionString, {
   ssl: { rejectUnauthorized: false },
+  logging: false
 });
 
 const UserModel = User(db, DataTypes);

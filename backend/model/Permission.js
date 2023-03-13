@@ -12,17 +12,19 @@ const Permission = (db, DataTypes) =>
                 primaryKey: true,
                 autoIncrement: true,
             },
-            slug: {
+           permission_key: {
+                type: DataTypes.STRING,
+                required:true
+            },
+            table_name: {
                 type: DataTypes.STRING,
                 required:true
             },
             description: {
                 type: DataTypes.STRING,
-                required:true
             },
             active: {
                 type: DataTypes.INTEGER,
-                required:true,
             },
         },
         {
